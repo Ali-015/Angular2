@@ -1,7 +1,11 @@
 .example-container {
+  padding: 10px 10px 10px 10px;
+  width: 30%
+}
 
-    padding: 10px 10px 10px 10px;
-    width: 50%
-
-      }
-  
+.align {
+  text-align: center
+}
+.align-button{
+  margin-left: 46em !important
+}
