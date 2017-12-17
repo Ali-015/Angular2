@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,9 @@ import {ErrorStateMatcher} from '@angular/material/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
+  constructor(private router: Router) { }
+
   title = 'app';
   public loginForm: FormGroup;
 
@@ -25,6 +29,7 @@ export class AppComponent implements OnInit {
 
 login(loginForm) {
   console.log(loginForm);
+  this.router.navigate(['/home']);
 }
 
 
