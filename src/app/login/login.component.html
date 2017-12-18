@@ -1,4 +1,4 @@
-<!-- <div style="text-align:center">
+<div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -24,10 +24,6 @@
 </div>
 
 
-<button routerLink="/home" [disabled]="!loginForm.valid" mat-raised-button color="primary" (click)="login(loginForm)">Login</button>
+<button [disabled]="!loginForm.valid" mat-raised-button color="primary" (click)="login(loginForm)">Login</button>
 
-</form> -->
-
-<router-outlet></router-outlet>
-
-
+</form>
