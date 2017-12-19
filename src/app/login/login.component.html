@@ -26,4 +26,7 @@
 
 <button [disabled]="!loginForm.valid" mat-raised-button color="primary" (click)="login(loginForm)">Login</button>
 
+<mat-error *ngIf="errorMessage">
+    Please enter a valid email address
+  </mat-error>
 </form>
