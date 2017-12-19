@@ -29,3 +29,6 @@
        `<body>` to be our scrolling element for mobile layouts. */
     flex: 1 0 auto;
   }
+  .align {
+    padding: 10px 30px 10px 30px;
+  }
