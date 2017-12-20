@@ -1,3 +1,4 @@
+import { ContactModule } from './contact/contact.module';
 import { CustomHttpInterceptor } from './http-interceptor';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -35,7 +36,8 @@ import { LoginComponent } from './login/login.component';
     MatToolbarModule,
     MatListModule,
     HttpClientModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    ContactModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

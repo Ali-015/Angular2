@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { CommunicateService } from './../communicate.service';
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
@@ -9,7 +10,7 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private service: CommunicateService) { }
+  constructor(private service: CommunicateService, private router: Router) { }
 
   public data: Subscription;
   public data1: any;
@@ -17,7 +18,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('snav') sideNav: ElementRef;
 
 
-  fillerNav = ['Industries', 'Solutions', 'Products', 'Resources', 'About Us', 'Option 6'];
+  fillerNav = ['Industries', 'Solutions', 'Products', 'Resources', 'About Us', 'Contact Us'];
   
     fillerContent = Array(1).fill(0).map(() =>
         `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -36,6 +37,7 @@ export class HomeComponent implements OnInit {
 
   setClickedRow (index: number) {
     this.selectedRow = index;
+    this.router.navigate(['home/contact']);
 }
 
   // ngOnInit() {

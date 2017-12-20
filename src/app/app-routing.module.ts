@@ -1,3 +1,4 @@
+import { ContactComponent } from './contact/contact/contact.component';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -20,6 +21,12 @@ const routes: Routes = [
     component: HomeComponent,
     pathMatch: 'full'
 }
+// ,
+// {
+//   path: 'contact',
+//   component: ContactComponent,
+//   pathMatch: 'full'
+// }
 ];
 
 @NgModule({
