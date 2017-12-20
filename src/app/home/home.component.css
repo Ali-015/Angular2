@@ -32,3 +32,6 @@
   .align {
     padding: 10px 30px 10px 30px;
   }
+  .mat-nav-list .active {
+      background-color: #0de9a7;
+  }

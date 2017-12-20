@@ -8,9 +8,9 @@
 
 
 <mat-sidenav-container class="example-sidenav-container">
-    <mat-sidenav #snav>
+    <mat-sidenav #snav [opened]="false">
       <mat-nav-list>
-        <a mat-list-item *ngFor="let nav of fillerNav">{{nav}}</a>
+        <a mat-list-item *ngFor="let nav of fillerNav; let i = index" (click)="setClickedRow(i)" [class.active]="i == selectedRow" >{{nav}}</a>
       </mat-nav-list>
     </mat-sidenav>
 

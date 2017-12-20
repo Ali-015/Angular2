@@ -1,5 +1,5 @@
 import { CommunicateService } from './../communicate.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
 
   public data: Subscription;
   public data1: any;
+  selectedRow = 0;
+  @ViewChild('snav') sideNav: ElementRef;
 
 
   fillerNav = ['Industries', 'Solutions', 'Products', 'Resources', 'About Us', 'Option 6'];
@@ -28,7 +30,13 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.data = this.service.get();
     console.log(this.data);
+    console.log(this.sideNav);
+    
   }
+
+  setClickedRow (index: number) {
+    this.selectedRow = index;
+}
 
   // ngOnInit() {
   //   this.data = this.service.getMessage().subscribe(data1 => { this.data1 = data1;
