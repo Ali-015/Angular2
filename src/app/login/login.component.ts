@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   public loginForm: FormGroup;
   public newData: any;
   public errorMessage: boolean;
+  public showLoader = false;
 
   ngOnInit() {
     this.createForm();
@@ -38,28 +39,26 @@ export class LoginComponent implements OnInit {
 }
 // Passing values using getters and setters while navigation
 login(loginForm) {
-
+  this.showLoader = true;  
   this.http.getDataFromServer(loginForm).subscribe(
     data => {
-      console.log('success');
       console.log(data);
       this.newData = data;
       if (_.where(this.newData, {'id': parseInt(loginForm.value.password, 10), 'username': loginForm.value.username}).length) {
-        console.log("contains");
         this.service.set(loginForm.value);
+        this.showLoader = false;
         this.router.navigate(['/home']);
     } else {
       this.errorMessage = true;
+      this.showLoader = false;
       console.log("sdfsdfsdf");
     }
     },
     err => {
+      this.showLoader = false;
       console.log("Error occured");
     }
   );
-
-  
-  // this.router.navigate(['/home']);
 }
 
 

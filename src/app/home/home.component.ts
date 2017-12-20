@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   public data1: any;
 
 
-  fillerNav = ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5', 'Option 6'];
+  fillerNav = ['Industries', 'Solutions', 'Products', 'Resources', 'About Us', 'Option 6'];
   
     fillerContent = Array(1).fill(0).map(() =>
         `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

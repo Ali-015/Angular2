@@ -8,6 +8,7 @@ export class CommunicateService {
   constructor() { }
 
    public data1: any;
+   public showLoader= false;
    private subject = new Subject<any>();
 
   set(data: any) {
@@ -16,6 +17,14 @@ export class CommunicateService {
 
   get() {
     return this.data1;
+  }
+
+  loader(loaderValue: boolean) {
+      this.showLoader = loaderValue;
+  }
+
+  getLoader() {
+    return this.showLoader;
   }
 
   sendMessage(message: string) {

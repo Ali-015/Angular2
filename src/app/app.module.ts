@@ -2,7 +2,7 @@ import { CustomHttpInterceptor } from './http-interceptor';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatSidenavModule, 
-  MatToolbarModule, MatListModule } from '@angular/material';
+  MatToolbarModule, MatListModule, MatProgressSpinnerModule } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -34,7 +34,8 @@ import { LoginComponent } from './login/login.component';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressSpinnerModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

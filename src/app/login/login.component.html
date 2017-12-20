@@ -1,18 +1,21 @@
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    <!-- Welcome to {{ title }}! -->
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <img width="300" style="padding: 7em 1em 1em 1em" alt="Angular Logo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMDAwMDAwQEBAQFBQUFBQcHBgYHBwsICQgJCAsRCwwLCwwLEQ8SDw4PEg8bFRMTFRsfGhkaHyYiIiYwLTA+PlQBAwMDAwMDBAQEBAUFBQUFBwcGBgcHCwgJCAkICxELDAsLDAsRDxIPDg8SDxsVExMVGx8aGRofJiIiJjAtMD4+VP/CABEIAC4AlgMBIgACEQEDEQH/xAAcAAADAAMBAQEAAAAAAAAAAAAABwgBBgkEBQP/2gAIAQEAAAAAYCAdfSYAAAADh705oaF1o7HUq1O4J8fL1gRqtJE+lzsmBtKXPYvlI19CqiMKZixrdKYbUtuRD1vhnf4x0LoVDjZ+J0Mhtu61qzNmLZ70gXqbpCdpjkN0JZv4+Tf/AKcztZizQxvqbLoLT9QTJTmDJgAM4D//xAAaAQACAwEBAAAAAAAAAAAAAAACBAEDBQAG/9oACAECEAAAAPQ5kD0hNlL+vnMrHW4pi2MqQFo9Af/EABkBAAIDAQAAAAAAAAAAAAAAAAMEAAECBf/aAAgBAxAAAADivyalzBE+e4E4yLsdPAGL2O5ev//EACwQAAEEAwAABQMCBwAAAAAAAAQCAwUGAQcIABESExQVN3YWdBAhIjBAUVP/2gAIAQEAARIA6j6isNbsJVJpRGA3Q8JTJSY2leq7XHpn1MTz2XUe8jPKk70WTdioSRJOegYtzLcwj/A3sFKUvoCykmDepaZ7MkwjXnU+nb2KOhcy3CyLicYcCbUw4j3Wvbyl3GF4UjtNqO2cfWZqBEAiwJM8V+SsPfVgXIu4r9TBaBwrOEZ0r2HXNjTI1fsMbiElCl+gR28l3xy1RwMFK4i49ILhEiZuzpbGpounFxADNjEnxCHWy7R3YyHXYXEJXhiZkoXD52Kt1FCNaWDvlzaYCJLMKHHAL7h2HJOEFwFCF+nsZz6l6L60r21pRqvS4GISadTn42Nk7OqWqa6ucsRWW2vV6GGJvvqzuGr+i1KOYFxnPoxqvt2uWmUHiLhFIgniF4bbP6J36bo9muuiwjMriWUV5+Lb3U0BCQ2IGBFLlSwWyD86p7eRY7MFC3CDGj0HvoZZPzvadHnCxiIQfAicOez42npjX+3wGR7CBnL46c4GO2Hwra4QUg+nzDU202nK/g8qbjtVK2FFVAwoh2Ely8BLCNqGL30hKVpbuWESV0OYecg9X69r0G3Cx9ZikAoa9CmurtYQ2qNljLrmMhgyguDmGOntzW2Q1xr2KGIwMLZq2OfKL6O+0uhPxd7xydpaii6xirRIRAcnKzOHXlP9SyoD26T4RkVIULBqYHZDgO2dWVWHDh4ekyooATWGmGdlX+uze0M3GlRb8Gn3hi8Mde2yTuG2Q4zKs4HAiwEDM600nRNb1cOLEhwnyMMo+ab2vp+rU/MNbYAFiOxIlLEOG21Zz7XoTTxJ7inSBHJsHLnI2sKjG6lip92LDKlJr33nyeu6dCUzchTEMK0GOeAObliljiP12HlVjM/NNihFkEW/tqRgdruhjwLqq3HLdELGne5tWiQjj8QDLnSCms+yJzjVp7Z29Y6Zyx5tASn1mSfuU7L1zeljmorOcHgW88kfMF3Nq4qDbJlwJcKRS1j3hL/b7X07tsNMZHKQsn0BRoXacCxVjtdQjGc5ajKzgVGejvtLoT8Xe8ct/YamfsnfHaGtJis7DZv4guXo2V+PkhdS35yhL19gqerEHDSeGsfJDpu9tOXPaTVZG1NELh5BxscAnt3VcjF2YO9xoylRhYzApi9Z9v0/9Lhh3UY8eVEYQ24R0BvCQ6DssPD12LLRGivZQAL0jQX9Zaj1DXCvT8wdMs6Xnl3PloSlftCPHc33oH/HxPFF/ro1Yx/qGC8bF0Nq7aTvy7BCIUdjGE4NF4f0sOTh1xc6Sj/jUaVVKFEJiq5EjRoac+eW6z/Prlv8/J8WTkPR9kkVn/Rn4511WVuo17p7XerGXU1eFaFeeT6Xir/pfWm0DAzLVC5PIDZUyyuyaE1NbYeAipmBySJAC5GjGqvV4OlwIMFCC/FjwW8oHZko6NlwCAJARgwUhGUPsTHG2i5Y3JLMWaD61eamteab1xq5t39MwbIr7ifS6WYGFIhviGDNEDPoy26zOcdaMmi1FtxBccpxecqa19ozV+r3fkVyCaZMyjKcm7A1Nr/aaQEWyI+oYjsu5F8VWrQVLgQYGDFyLHBIUgdm86H1RsqaxMWaBycckZA6XQARYwEYIVHtsDMoZaR/HT+goWqW2x32VyydNS0vIvhf3858f//EAC8QAAIBBAAEBQMCBwAAAAAAAAECAwAEERITIUFRFCIxYXEFMoMgQEJDhJGhoqP/2gAIAQEAEz8AADSiRxngw5yFwD5mq6+rBLlweuksocV9ZEjvbv0ihd/OJey51A/YyA6TRSyCdPlelfUSIMP2WU4R6TGGyOTZHrkV4l3YJabgMIwnNnKVfSu8zjuREVC0svEtriQ+iZOCjnoKeGN44URsbFpAeePQU9wYdkg4eHGqHO+9STsba0YsQIhgK0j1ZZd7l4WxiJHNSme5KgdXeLRRQl4sFyRzIjYgFXqMB5riTGdIk6mrueSaQ/OmgFRy8S1LN0l2wYqe4MOggCdlbOd6knc29pI/8gYAZ2FWkrcOJ5DhRKkmcJ3euIySllkKMn8WzRYxLyAUkCrduFcw57PzBHswIqdOBckdkYZRzUxJFrPKcI8QP2Hfk4oeqR+JcuR74prZJOIMYJkLglyepakJHhpVchhH2XqKTIkncgZiJ6R1+K2q6hWYQRrIUSOIPVpGkKoJVE87ogAUSSM9IYFAUU2i6XcR2aRRGcAMRmifKHvolndvk7gVNAkk1zLjzszMCdey1AoSJ5dd0lVBgKSAQ1MclktniSP/AEqaFZHVFlMaRoWzhQFqJAiJJIWR9QO5TNBBxJWaJSS7+pqdODeyyq2GmG/2adENSwLAoftLJscClTEcZWQyqPl35AVqWG8V0z4IHqKhhWZS/XhSbCg2/AgQli8rD5Lua7iBglfitq/M9FN0hu4AECyjtIqim+grODJ14TxROCtR/Sbd7ri9ZJoQpAi/yoqNeVtPANIy3ZXXAFQRCeK50GN/UFXNFdrm7uJ8LuyJn4VaU7DjzmKRwD2UnFfnevyy1+Fat3MFxgDADOmNwOm9S3iBP+camoVwXb02djlnb3Yk1/VNVhO0ERPtGcqvwtOxmuJB2MjknX2HKvFTw6oxyRiF0rxdwnBiYKMZRwW5IPurd5NFLFj5pCzHmanjWSORT6qysCCKtrt1j/s++KctNcOOxkkJIHsOVSoHR0YYKsrZBB6g1aXTpGfhG2Cipmae4wfUK8hOoPULQuJodDNgPnhOmc6iuI8mgZi580hZjzNeLuIcRoSQMROo5bVknVIxqoyck4A/QATHYwTzMQFyBmVgfM37D//EACcRAAIBAwQCAgEFAAAAAAAAAAECAwAEERIhMVEFExRxIiMyQVKR/9oACAECAQE/AGL2dtC1vCH1Ll2xmnEt/K7xxAaV3Ap/HXaJrMewHYNCzkcRaGRmkBOkHcfdPY3SAFo+WwBUlhdRoXKbDnBBxUFncXAyibdmjZXKyiIphm46NHx14ELevYV8Wbof7UCeUtggRSVbfHIoKPkzevCuYRnHdePhu4p3eXUqBTrLcGrZUC2hQYDSOatJs+Sm9jEk6guaiPoaV1tJB+J1EtsanSWext/j5KqPyVe6gDotmkp/U1k4PIGDVlI7eTmBYnOunJ1t90l1cRrpWVwOs1aXIhS4ZySXXA+zTXE7roaRivWaWaZQoEjDTxvxRYk5yc85prmd10tI5HRNRzSxfsdlz0a90pfWXbV/bO9LJIrF1Yhj/OazX//EACURAAICAgEDBAMBAAAAAAAAAAECAAMEERIhMVETFDJxI0Fhkf/aAAgBAwEBPwBeOTfYLrCujpRvUQ14iKr2E7PQmLm47NxDT3aBrQysq1kDkex+ouXQxIDdhvcTLodgobqe3SW5NNJAZuviDKpNZcN0Hee9x+QXn3nuK/7LWwbixYgMP3CT6NfPZUWdPqZdmPZUi16L7GtS4sTkBjvSoJkVawq+A8Fo/wCQIpvTuNaEqaurKt9bufiTLSrnIZPhxH+7EyUQYVWgB8YoXiPqNj0u2yikzIpNjUhdAKdxaalbkEUHzqGqs7JQHffpAABrXSLRSrcgig/Uequz5KDPTr48eI141CiEBSoI8TU//9k=">
 </div>
+
 <h2 style="text-align:center">Login</h2>
+
 
 <form class="align" [formGroup]="loginForm" novalidate>
 <div>
+    <mat-spinner style="margin:auto" *ngIf="showLoader"></mat-spinner>
   <mat-form-field class="example-container">
     <input type="text" matInput placeholder="Username" formControlName="username" required> 
 
     <mat-error *ngIf="loginForm.controls.username.status == 'INVALID'">
-      Please enter a valid email address
+      Please enter a valid username
     </mat-error>
   </mat-form-field>
 </div>
@@ -20,6 +23,9 @@
 <div>
   <mat-form-field class="example-container">
     <input type="password" matInput placeholder="Password" formControlName="password" required>
+    <mat-error *ngIf="loginForm.controls.password.status == 'INVALID'">
+        Please enter password
+      </mat-error>
   </mat-form-field>
 </div>
 
@@ -27,6 +33,6 @@
 <button [disabled]="!loginForm.valid" mat-raised-button color="primary" (click)="login(loginForm)">Login</button>
 
 <mat-error *ngIf="errorMessage">
-    Please enter a valid email address
+    Please enter valid credentials
   </mat-error>
 </form>
