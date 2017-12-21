@@ -13,13 +13,18 @@
         <a mat-list-item *ngFor="let nav of fillerNav; let i = index" (click)="setClickedRow(i)" [class.active]="i == selectedRow" >{{nav}}</a>
       </mat-nav-list>
     </mat-sidenav>
+<!-- </mat-sidenav-container> -->
 
+<!-- <mat-sidenav-container> -->
     <mat-sidenav-content class="align">
-      <p *ngFor="let content of fillerContent">{{content}}</p>
+        <router-outlet>
+            
+          </router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
 
 </div>
 
-<router-outlet></router-outlet>
+
+
 

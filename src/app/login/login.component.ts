@@ -47,7 +47,7 @@ login(loginForm) {
       if (_.where(this.newData, {'id': parseInt(loginForm.value.password, 10), 'username': loginForm.value.username}).length) {
         this.service.set(loginForm.value);
         this.showLoader = false;
-        this.router.navigate(['/home']);
+        this.router.navigate(['home/industry']);
     } else {
       this.errorMessage = true;
       this.showLoader = false;

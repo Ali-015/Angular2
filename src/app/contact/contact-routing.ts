@@ -5,9 +5,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 const contactRoutes: Routes = [
   {
-    path: 'home/contact',
+    path: '',
     component: ContactComponent
   }
 ];
 
-export const ContactRouting: ModuleWithProviders = RouterModule.forRoot(contactRoutes);
+export const ContactRouting: ModuleWithProviders = RouterModule.forChild(contactRoutes);

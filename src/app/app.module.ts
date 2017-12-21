@@ -1,3 +1,8 @@
+import { ResourcesModule } from './resources/resources.module';
+import { AboutModule } from './about/about.module';
+import { ProductsModule } from './products/products.module';
+import { SolutionsModule } from './solutions/solutions.module';
+import { IndustriesModule } from './industries/industries.module';
 import { ContactModule } from './contact/contact.module';
 import { CustomHttpInterceptor } from './http-interceptor';
 import { BrowserModule } from '@angular/platform-browser';
@@ -37,7 +42,12 @@ import { LoginComponent } from './login/login.component';
     MatListModule,
     HttpClientModule,
     MatProgressSpinnerModule,
-    ContactModule
+    ContactModule,
+    IndustriesModule,
+    SolutionsModule,
+    ProductsModule,
+    AboutModule,
+    ResourcesModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

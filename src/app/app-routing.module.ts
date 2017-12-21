@@ -19,7 +19,33 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    pathMatch: 'full'
+   
+    children: [
+      {
+      path: '',
+      redirectTo: 'home',
+      pathMatch: 'full'
+      // component: HomeComponent,
+      },
+      { path: 'contact', 
+      loadChildren: 'app/contact/contact.module#ContactModule'
+      },
+      { path: 'industry', 
+      loadChildren: 'app/industries/industries.module#IndustriesModule'
+      },
+      { path: 'solutions', 
+      loadChildren: 'app/solutions/solutions.module#SolutionsModule'
+      },
+      { path: 'products', 
+      loadChildren: 'app/products/products.module#ProductsModule'
+      },
+      { path: 'resources', 
+      loadChildren: 'app/resources/resources.module#ResourcesModule'
+      },
+      { path: 'about', 
+      loadChildren: 'app/about/about.module#AboutModule'
+      }
+    ]
 }
 // ,
 // {

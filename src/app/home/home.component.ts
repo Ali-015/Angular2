@@ -20,13 +20,6 @@ export class HomeComponent implements OnInit {
 
   fillerNav = ['Industries', 'Solutions', 'Products', 'Resources', 'About Us', 'Contact Us'];
   
-    fillerContent = Array(1).fill(0).map(() =>
-        `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-         laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-         voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`);
-
   // Working with getters and setters
   ngOnInit() {
     this.data = this.service.get();
@@ -37,7 +30,30 @@ export class HomeComponent implements OnInit {
 
   setClickedRow (index: number) {
     this.selectedRow = index;
-    this.router.navigate(['home/contact']);
+    this.sideNav.close();
+    switch ( index ) {
+      case 0:
+      this.router.navigate(['home/industry']);
+      break;
+      case 1:
+      this.router.navigate(['home/solutions']);
+      break;
+      case 2:
+      this.router.navigate(['home/products']);
+      break;
+      case 3:
+      this.router.navigate(['home/resources']);
+      break;
+      case 4:
+      this.router.navigate(['home/about']);
+      break;
+      case 5:
+      this.router.navigate(['home/contact']);
+      break;
+      default:
+      this.router.navigate(['home/industry']);
+    }
+    // this.router.navigate(['home/contact']);
 }
 
   // ngOnInit() {
