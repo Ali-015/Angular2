@@ -1,6 +1,6 @@
 import { HttpService } from './../http.service';
 import { CommunicateService } from './../communicate.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import {FormGroup, FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { Router } from '@angular/router';
@@ -13,7 +13,7 @@ import { parse } from 'url';
   styleUrls: ['./login.component.css'],
   providers: [HttpService]
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
 
   constructor(private router: Router, private service: CommunicateService, private http: HttpService) { }
 
@@ -24,9 +24,11 @@ export class LoginComponent implements OnInit {
   public newData: any;
   public errorMessage: boolean;
   public showLoader = false;
+  public subscription;
 
   ngOnInit() {
     this.createForm();
+    // this.loginForm.get('username').valueChanges.subscribe( x => console.log(x));
   }
 
 
@@ -40,7 +42,7 @@ export class LoginComponent implements OnInit {
 // Passing values using getters and setters while navigation
 login(loginForm) {
   this.showLoader = true;  
-  this.http.getDataFromServer(loginForm).subscribe(
+  this.subscription = this.http.getDataFromServer(loginForm).subscribe(
     data => {
       console.log(data);
       this.newData = data;
@@ -59,6 +61,7 @@ login(loginForm) {
       console.log("Error occured");
     }
   );
+  console.log(this.subscription);
 }
 
 
@@ -68,6 +71,9 @@ login(loginForm) {
 // }
 
 
+ngOnDestroy() {
+  this.subscription.unsubscribe();
+}
 
 
 }
