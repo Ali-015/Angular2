@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { CommunicateService } from './../communicate.service';
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs/Subscription';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
 
   constructor(private service: CommunicateService, private router: Router) { }
 
@@ -55,6 +55,10 @@ export class HomeComponent implements OnInit {
     }
     // this.router.navigate(['home/contact']);
 }
+
+      ngOnDestroy() {
+        // this.subscription.unsubscribe();
+      }
 
   // ngOnInit() {
   //   this.data = this.service.getMessage().subscribe(data1 => { this.data1 = data1;
