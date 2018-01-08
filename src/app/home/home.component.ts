@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   public data: Subscription;
   public data1: any;
   selectedRow = 0;
-  @ViewChild('snav') sideNav: ElementRef;
+  // @ViewChild('snav') sideNav: ElementRef;
 
 
   fillerNav = ['Industries', 'Solutions', 'Products', 'Resources', 'About Us', 'Contact Us'];
@@ -24,13 +24,12 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.data = this.service.get();
     console.log(this.data);
-    console.log(this.sideNav);
+    // console.log(this.sideNav);
     
   }
 
   setClickedRow (index: number) {
     this.selectedRow = index;
-    this.sideNav.close();
     switch ( index ) {
       case 0:
       this.router.navigate(['home/industry']);
@@ -53,7 +52,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       default:
       this.router.navigate(['home/industry']);
     }
-    // this.router.navigate(['home/contact']);
 }
 
       ngOnDestroy() {
