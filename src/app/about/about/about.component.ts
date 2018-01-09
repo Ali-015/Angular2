@@ -1,5 +1,7 @@
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material';
+import { MyDialogComponent } from '../my-dialog/my-dialog.component';
 
 @Component({
   selector: 'app-about',
@@ -8,11 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   selectedValue= 'Sales/Request Demo';
-  businessValue = 'Select';
+  // businessValue = 'Select';
   public aboutForm: FormGroup;
+  public dialogRef: any;
+  public dialogResult: any;
   
 
     options = [
@@ -23,7 +27,6 @@ export class AboutComponent implements OnInit {
     ];
 
     businessOptions = [
-      {value: 'Select', viewValue: 'Select'},
       {value: 'Buy Here Pay Here Dealership', viewValue: 'Buy Here Pay Here Dealership'},
       {value: 'Lender/Bank/Credit Union', viewValue: 'Lender/Bank/Credit Union'},
       {value: 'Rental Agencies', viewValue: 'Rental Agencies'},
@@ -45,8 +48,24 @@ export class AboutComponent implements OnInit {
       companyname: new FormControl('', Validators.minLength(3)),
       email: new FormControl('', Validators.minLength(3)),
       phone: new FormControl('', Validators.minLength(3)),
-      businessOption: new FormControl(''),
+      businessOption: new FormControl('', Validators.required),
     });
   }
 
+
+  openDialog(aboutForm) {
+    
+
+    this.dialogRef = this.dialog.open(MyDialogComponent, {
+      width: '600px',
+      data: aboutForm.value
+    });
+
+    this.dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog closed: ${result}`);
+      this.dialogResult = result;
+    });
+
+  }
+ 
 }

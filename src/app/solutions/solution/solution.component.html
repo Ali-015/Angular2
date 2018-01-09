@@ -1,3 +1,40 @@
-<p>
-  solution works!
-</p>
+<!-- <p>
+    solution works!
+</p> -->
+
+<div class="outer-container">
+
+    <div class="inner-container">
+
+        <chart [options]="options"></chart>
+
+
+        <br>
+
+        <chart [options]="newOptions" (selection)="onChartSelection($event)"> </chart>
+        <p>Selection from
+            <b>{{from}}</b> to
+            <b>{{to}}</b>
+        </p>
+
+
+
+        <br>
+
+
+
+    </div>
+</div>
+
+<div style="float:right">
+
+    <chart [options]="lastOptions">
+        <series>
+            <point (select)="onPointSelect($event)"></point>
+        </series>
+    </chart>
+    <p>
+        Selection is
+        <b>{{point}}</b>
+        <p>
+</div>

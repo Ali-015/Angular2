@@ -22,7 +22,7 @@
 
         <!-- <p> Selected value: {{selectedValue}} </p> -->
 
-        <div style="font-weight: bold;">First Name</div>
+         <div style="font-weight: bold;">First Name</div>
         <mat-form-field style="width:100%">
           <input type="text" matInput formControlName="firstname" required>
 
@@ -60,6 +60,7 @@
             Please enter a valid email
           </mat-error>
         </mat-form-field>
+        
 
         <div style="font-weight: bold;">Phone</div>
         <mat-form-field style="width:100%">
@@ -68,7 +69,7 @@
           <mat-error *ngIf="aboutForm.controls.phone.status == 'INVALID'">
             Please enter a valid phone number
           </mat-error>
-        </mat-form-field>
+        </mat-form-field> 
 
 
 
@@ -84,7 +85,7 @@
 
 
 
-        <button style="display: block; margin: 0 auto;" class="mat-raised-button mat-primary" [disabled]="!aboutForm.valid"  (click)="login(loginForm)">Contact</button>
+        <button style="display: block; margin: 0 auto;" class="mat-raised-button mat-primary" [disabled]="!aboutForm.valid"  (click)="openDialog(aboutForm)">Contact</button>
 
       </form>
 

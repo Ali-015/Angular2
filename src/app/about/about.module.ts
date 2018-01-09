@@ -3,7 +3,8 @@ import { aboutRouting } from './about-routing';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about/about.component';
-import { MatSelectModule, MatFormFieldModule, MatInput, MatInputModule } from '@angular/material';
+import { MatSelectModule, MatFormFieldModule, MatInput, MatInputModule, MatDialogModule } from '@angular/material';
+import { MyDialogComponent } from './my-dialog/my-dialog.component';
 
 @NgModule({
   imports: [
@@ -13,9 +14,13 @@ import { MatSelectModule, MatFormFieldModule, MatInput, MatInputModule } from '@
     MatSelectModule,
     MatFormFieldModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
-  declarations: [AboutComponent],
+  declarations: [AboutComponent, MyDialogComponent],
+  entryComponents: [
+    MyDialogComponent
+  ],
   exports: [AboutComponent]
 })
 export class AboutModule { }
