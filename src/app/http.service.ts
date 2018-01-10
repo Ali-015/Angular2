@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operator/map';
 
 
 @Injectable()
 export class HttpService {
 
-  jsonPath = './tableData.json';
+  jsonPath = './assets/tableData.json';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -19,7 +20,7 @@ export class HttpService {
   getJsonDataForTable () {
 
     return this.httpClient.get(this.jsonPath);
-    // .map((res: any) => res.json())
+    // .map((res: any) => res.json());
     // .catch((error: any) => console.log(error));
 
 
