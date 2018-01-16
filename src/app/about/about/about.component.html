@@ -75,7 +75,7 @@
 
         <div style="font-weight: bold;">Business Type</div>
         <mat-form-field style="width:100%">
-          <mat-select formControlName="businessOption" [(ngModel)]="businessValue" name="businessOption">
+          <mat-select formControlName="businessOption" name="businessOption">
             <mat-option *ngFor="let businessOption of businessOptions" [value]="businessOption.value">
               {{businessOption.viewValue}}
             </mat-option>
@@ -85,7 +85,7 @@
 
 
 
-        <button style="display: block; margin: 0 auto;" class="mat-raised-button mat-primary" [disabled]="aboutForm.valid"  (click)="openDialog(aboutForm)">Contact</button>
+        <button style="display: block; margin: 0 auto;" class="mat-raised-button mat-primary" [disabled]="!aboutForm.valid"  (click)="openDialog(aboutForm)">Contact</button>
 
       </form>
 

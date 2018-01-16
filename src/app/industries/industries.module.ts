@@ -2,7 +2,10 @@ import { IndustryRouting } from './industry-routing';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IndustryComponent } from './industry/industry.component';
-import { MatFormFieldModule, MatTableModule, MatPaginatorModule, MatInputModule, MatSortModule } from '@angular/material';
+import { MatFormFieldModule, MatTableModule, MatPaginatorModule, MatInputModule, MatSortModule, MatDialogModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MyNewDialogComponent } from './../about/my-dialog/my-dialog.component';
+
 
 @NgModule({
   imports: [
@@ -12,9 +15,15 @@ import { MatFormFieldModule, MatTableModule, MatPaginatorModule, MatInputModule,
     MatTableModule,
     MatPaginatorModule,
     MatInputModule,
-    MatSortModule
+    MatSortModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatDialogModule
   ],
-  declarations: [IndustryComponent],
+  declarations: [IndustryComponent, MyNewDialogComponent],
+  entryComponents: [
+    MyNewDialogComponent
+],
   exports: [IndustryComponent]
 })
 export class IndustriesModule { }
