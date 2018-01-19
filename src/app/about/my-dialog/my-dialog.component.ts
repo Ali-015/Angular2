@@ -1,6 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import * as _ from 'underscore';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 
 
 @Component({
@@ -38,19 +40,38 @@ export class MyDialogComponent implements OnInit {
 
 export class MyNewDialogComponent implements OnInit {
   
-    constructor(public thisDialogRef: MatDialogRef<MyNewDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: string) { }
+    constructor(public thisDialogRef: MatDialogRef<MyNewDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: any) { }
   
     public arr1: any;
     public flag: boolean;
+    public dialogForm: FormGroup;
+    
+
+
+    
   
     ngOnInit() {
       this.flag = false;
-      this.arr1 = _.values(this.data);  // Converting object into array
-      console.log(this.arr1);
+      // console.log(this.data);
+      this.createForm();
+    }
+
+    createForm() {
+      console.log(this.data);
+      this.dialogForm = new FormGroup({
+        name: new FormControl(this.data.name, Validators.minLength(3)),
+        progress: new FormControl(this.data.progress)
+      });
     }
   
-    onCloseConfirm() {
+    save(dialogForm: FormGroup) {
+      // console.log(dialogForm.value);
+      this.data.name = dialogForm.value.name;
+      this.data.progress = dialogForm.value.progress;
+      
+      console.log(this.data);
       this.thisDialogRef.close('Confirm');
+      // this.thisDialogRef.close(this.data);
     }
     onCloseCancel() {
       this.thisDialogRef.close('Cancel');

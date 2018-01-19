@@ -1,3 +1,4 @@
+import { IndustryDetailModule } from './industry-detail/industry-detail.module';
 import { ResourcesModule } from './resources/resources.module';
 import { AboutModule } from './about/about.module';
 import { ProductsModule } from './products/products.module';
@@ -47,7 +48,8 @@ import { LoginComponent } from './login/login.component';
     SolutionsModule,
     ProductsModule,
     AboutModule,
-    ResourcesModule
+    ResourcesModule,
+    IndustryDetailModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

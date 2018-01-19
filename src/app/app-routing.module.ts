@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { IndustryDetailComponent } from './industry-detail/industry-detail/industry-detail.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     pathMatch: 'full'
+},
+{
+  path: 'industryDetail/:id',
+  component: IndustryDetailComponent
 },
   {
     path: 'home',

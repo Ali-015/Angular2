@@ -6,7 +6,12 @@ import { Routes, RouterModule } from '@angular/router';
 const industryRoutes: Routes = [
   {
     path: '',
-    component: IndustryComponent
+    component: IndustryComponent,
+    // children: [
+    //   { path: 'industryDetail', 
+    //   loadChildren: 'app/industry-detail/industry-detail.module#IndustryDetailModule'
+    //   }
+    // ]
   }
 ];
 

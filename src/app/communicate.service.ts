@@ -5,38 +5,38 @@ import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class CommunicateService {
 
-  constructor() { }
+    constructor() { }
 
-   public data1: any;
-   public showLoader= false;
-   private subject = new Subject<any>();
+    public data1: any;
+    public showLoader = false;
+    private subject = new Subject<any>();
 
-  set(data: any) {
-     this.data1 = data;
-  }
+    set(data: any) {
+        this.data1 = data;
+    }
 
-  get() {
-    return this.data1;
-  }
+    get() {
+        return this.data1;
+    }
 
-  loader(loaderValue: boolean) {
-      this.showLoader = loaderValue;
-  }
+    loader(loaderValue: boolean) {
+        this.showLoader = loaderValue;
+    }
 
-  getLoader() {
-    return this.showLoader;
-  }
+    getLoader() {
+        return this.showLoader;
+    }
 
-  sendMessage(message: string) {
-    this.subject.next({ text: message });
-}
+    sendMessage(message: string) {
+        this.subject.next({ text: message });
+    }
 
-clearMessage() {
-    this.subject.next();
-}
+    clearMessage() {
+        this.subject.next();
+    }
 
-getMessage(): Observable<any> {
-    return this.subject.asObservable();
-}
+    getMessage(): Observable<any> {
+        return this.subject.asObservable();
+    }
 
 }
