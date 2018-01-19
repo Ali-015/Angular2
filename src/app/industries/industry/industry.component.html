@@ -42,8 +42,8 @@
       <ng-container matColumnDef="actions" >
           <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
           <mat-cell *matCellDef="let row;let i=index;"  >
-              <i class="material-icons" (click)="edit(row,dataSource,i)">mode_edit</i>
-              <i class="material-icons" (click)="delete(row,dataSource,i)">delete</i>
+              <i class="material-icons" (click)="edit(row,dataSource,i,$event)">mode_edit</i>
+              <i class="material-icons" (click)="delete(row,dataSource,i,$event)">delete</i>
           </mat-cell>
       </ng-container> 
   
