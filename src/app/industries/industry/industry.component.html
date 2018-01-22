@@ -1,6 +1,7 @@
 <!-- <p>
   industry works!
 </p> -->
+<div style="float:right">Total Records: {{totalRecords}}</div>
 
 
 <div class="example-header">
@@ -9,31 +10,29 @@
     </mat-form-field>
   </div>
 
+
+
   
   
   <div class="example-container mat-elevation-z8">
  
-    <mat-table [dataSource]="dataSource" matSort >
+    <mat-table [dataSource]="dataSource" matSort *ngIf="!noRecords">
   
-      <!-- ID Column -->
       <ng-container matColumnDef="id">
         <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
         <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
       </ng-container>
   
-      <!-- Progress Column -->
       <ng-container matColumnDef="progress">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Progress </mat-header-cell>
         <mat-cell *matCellDef="let row"> {{row.progress}}% </mat-cell>
       </ng-container>
   
-      <!-- Name Column -->
       <ng-container matColumnDef="name">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
         <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
       </ng-container>
   
-      <!-- Color Column -->
       <ng-container matColumnDef="color">
         <mat-header-cell *matHeaderCellDef mat-sort-header> Color </mat-header-cell>
         <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.color}} </mat-cell>
@@ -51,8 +50,11 @@
       <mat-row *matRowDef="let row; columns: displayedColumns;let i=index;"(click)="goToDetail(dataSource.filteredData,i)">
       </mat-row>
     </mat-table>
+
+    <p *ngIf="noRecords" style="margin:0 auto;color: red;
+    padding-top: 3em;">No Records Found</p>
   
-    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+    <mat-paginator [pageSizeOptions]="[5,10,25,100]"></mat-paginator>
   </div>
 
   
