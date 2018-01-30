@@ -1,5 +1,5 @@
 import { CommunicateService } from './../../communicate.service';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './industry-detail.component.html',
   styleUrls: ['./industry-detail.component.css']
 })
-export class IndustryDetailComponent implements OnInit {
+export class IndustryDetailComponent implements OnInit, OnDestroy {
 
   public showData: any;
 
@@ -22,5 +22,11 @@ export class IndustryDetailComponent implements OnInit {
    this.service.get().fromLogin === true ? this.showData = this.service.get().rowData : this.showData = this.service.get();
    
   }
+
+
+ngOnDestroy() {
+
+  
+}
 
 }

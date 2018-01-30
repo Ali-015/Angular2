@@ -137,7 +137,7 @@ export class IndustryComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnDestroy() {
     this.jsonData.unsubscribe();
-    this.dialogRef.unsubscribe();
+    // this.dialogRef.unsubscribe();
   }
 
 }

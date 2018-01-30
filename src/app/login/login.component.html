@@ -32,7 +32,7 @@
 
 <button [disabled]="!loginForm.valid" mat-raised-button color="primary" (click)="login(loginForm)">Login</button>
 
-<mat-error *ngIf="errorMessage">
+<mat-error style="margin-top: 2em;" *ngIf="errorMessage">
     Please enter valid credentials
   </mat-error>
 </form>
