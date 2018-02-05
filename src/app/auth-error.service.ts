@@ -3,10 +3,14 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AuthErrorService {
 
-  constructor() { }
+  public hello: any;
 
-  toString() {
-    return 'You are not authorized to view this content!!!';
+  constructor() { 
+    // this.hello = hello;
+  }
+
+  toString1() {
+    return 'hi';
 }
 
 }

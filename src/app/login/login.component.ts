@@ -78,7 +78,7 @@ ngOnDestroy() {
 
 
 throwCustomError() {
-  throw new AuthErrorService();
+  throw new AuthErrorService().toString1();
 }
 
 

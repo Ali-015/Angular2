@@ -13,7 +13,7 @@ export class CustomErrorHandlerService extends ErrorHandler {
 public handleError(error: any): void {
 
   if (error.originalError instanceof AuthErrorService) {
-    console.log(this);
+    console.log(`[CUSTOM ERROR]:::${error.originalError.toString()}`);
 } else {
   super.handleError(error);
 }
