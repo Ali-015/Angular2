@@ -7,6 +7,8 @@
 
 <h2 style="text-align:center">Login</h2>
 
+<button (click)="throwCustomError()">Throw Authorization Error</button>
+
 
 <form class="align" [formGroup]="loginForm" novalidate>
 <div>
@@ -36,3 +38,6 @@
     Please enter valid credentials
   </mat-error>
 </form>
+
+
+

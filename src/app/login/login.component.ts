@@ -1,3 +1,4 @@
+import { AuthErrorService } from './../auth-error.service';
 import { HttpService } from './../http.service';
 import { CommunicateService } from './../communicate.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
@@ -73,6 +74,11 @@ login(loginForm) {
 
 ngOnDestroy() {
   this.subscription.unsubscribe();
+}
+
+
+throwCustomError() {
+  throw new AuthErrorService();
 }
 
 

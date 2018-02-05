@@ -1,3 +1,5 @@
+import { ErrorHandler } from '@angular/core/';
+import { CustomErrorHandlerService } from './custom-error-handler.service';
 import { IndustryDetailModule } from './industry-detail/industry-detail.module';
 import { ResourcesModule } from './resources/resources.module';
 import { AboutModule } from './about/about.module';
@@ -55,7 +57,11 @@ import { LoginComponent } from './login/login.component';
     provide: HTTP_INTERCEPTORS,
     useClass: CustomHttpInterceptor,
     multi: true
-  }],
+  }, {
+    provide: ErrorHandler,
+    useClass: CustomErrorHandlerService
+  }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
